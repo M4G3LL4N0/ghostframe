@@ -1,14 +1,7 @@
 import Link from "next/link";
-import { TrustStrip } from "@/components/TrustStrip";
-import { MarketingGraphicsStack } from "@/components/MarketingGraphicsStack";
-import { ProcessFlowSection } from "@/components/ProcessFlowSection";
 
 export default function Home() {
   return (
-        <div className="mx-auto max-w-6xl px-4 py-4 sm:px-6">
-          <TrustStrip />
-        </div>
-        <MarketingGraphicsStack />
     <div className="flex w-full flex-col gap-10">
       <section className="glass relative overflow-hidden rounded-3xl p-10 md:p-14">
         <div className="absolute -right-24 -top-24 h-64 w-64 rounded-full bg-violet-500/25 blur-3xl" />
@@ -51,6 +44,22 @@ export default function Home() {
             <p className="mt-2 text-sm text-white/70">{copy}</p>
           </article>
         ))}
+      </section>
+
+      <section className="glass rounded-3xl p-8 md:p-10">
+        <h2 className="text-2xl font-semibold">How it works</h2>
+        <ol className="mt-5 grid gap-4 md:grid-cols-3">
+          {[
+            ["1. Import", "Bring a portrait or still you intend to publish."],
+            ["2. Vary", "Generate visually consistent, technically distinct frames."],
+            ["3. Choose", "Pick the variant with the privacy posture you want."],
+          ].map(([title, copy]) => (
+            <li key={title} className="rounded-2xl border border-white/10 bg-white/5 p-5">
+              <p className="text-sm uppercase tracking-[0.16em] text-cyan-200/80">{title}</p>
+              <p className="mt-2 text-sm text-white/75">{copy}</p>
+            </li>
+          ))}
+        </ol>
       </section>
     </div>
   );
