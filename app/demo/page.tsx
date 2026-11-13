@@ -84,8 +84,7 @@ export default function DemoPage() {
       <section className="glass rounded-3xl p-8">
         <h1 className="text-3xl font-semibold">GhostFrame Demo Studio</h1>
         <p className="mt-2 max-w-3xl text-sm text-white/70">
-          Local MVP simulation: upload/select a sample, tune privacy intensity,
-          and generate variation cards with a mock privacy report.
+          Illustrative local simulation only. No image is uploaded or processed, the sample variation cards and privacy scores are mock data, and this prototype does not measure or guarantee protection from reverse-image search, scraping, or identification.
         </p>
       </section>
 
@@ -128,18 +127,18 @@ export default function DemoPage() {
             disabled={!uploaded || processing}
             className="mt-6 rounded-full bg-white px-6 py-3 text-sm font-semibold text-black disabled:cursor-not-allowed disabled:opacity-50"
           >
-            {processing ? "Generating secure variations..." : "Generate variation cards"}
+            {processing ? "Simulating..." : "Preview mock variation cards"}
           </button>
         </div>
 
         <div className="glass rounded-3xl p-6">
-          <h2 className="text-lg font-semibold">Mock Privacy Report</h2>
+          <h2 className="text-lg font-semibold">Illustrative mock report</h2>
           <div className="mt-4 space-y-3 text-sm">
             <MetricRow
               label="Visual similarity score"
               value={`${recommended.similarity}%`}
             />
-            <MetricRow label="Metadata removal status" value="EXIF stripped / normalized" />
+            <MetricRow label="Metadata status" value="Not processed in this mock" />
             <MetricRow
               label="Reverse-search risk estimate"
               value={`${recommended.reverseRisk}%`}
@@ -154,7 +153,7 @@ export default function DemoPage() {
             <p className="text-xs uppercase tracking-[0.2em] text-white/60">GhostScore</p>
             <p className="mt-2 text-3xl font-semibold">{score}/100</p>
             <p className="mt-1 text-xs text-white/60">
-              Higher means lower scraping and re-identification risk.
+              Illustrative score only; not a privacy or security measurement.
             </p>
           </div>
         </div>

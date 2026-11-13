@@ -12,9 +12,7 @@ export default function Home() {
             Publish confidently with cinematic visual privacy.
           </h1>
           <p className="max-w-2xl text-lg text-white/75">
-            GhostFrame transforms one image into multiple visually consistent, technically
-            distinct variants to reduce reverse-image search exposure, dataset scraping, and
-            identity traceability while preserving intent and style.
+            GhostFrame is exploring visual privacy tools for safer image publishing. The current studio is a local-only prototype; it does not generate real image variations or verify protection against reverse-image search, scraping, or identification.
           </p>
           <div className="flex flex-wrap gap-4">
             <Link
